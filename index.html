@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<title>Заказ билетов жд</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />	
+  </head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-lg-12">
+				<form class="form">
+					<div class="row">
+						<div class="col-md-12 col-lg-12">
+							<h1>Заказ билетов жд</h1>
+						</div>
+					</div>
+					<div class="row justify-content-center">
+						<div class="col-md-5 col-lg-4">
+							<label for="passengers">
+								<i class="fa fa-users" aria-hidden="true"></i>
+							</label>
+							<input type="text" name="passengers" id="passengers" placeholder="пассажиры" required>
+						</div>
+						<div class="col-md-5 offset-md-0 col-lg-4 offset-lg-2">
+							<label for="linen">
+								<i class="fa fa-bed" aria-hidden="true"></i>
+							</label>
+							<input type="text" name="linen" id="linen" placeholder="постельное бельё" required>
+						</div>
+					</div>
+					<div class="row justify-content-center">
+						<div class="col-md-5 col-lg-4">
+							<label for="tea">
+								<i class="fa fa-coffee" aria-hidden="true"></i>
+							</label>
+							<input type="text" name="tea" id="tea" placeholder="чай" required>
+						</div>	
+						<div class="col-md-5 offset-md-0 col-lg-4 offset-lg-2">
+							<label for="dinner">
+								<i class="fa fa-cutlery" aria-hidden="true"></i>
+							</label>
+							<input type="text" name="dinner" id="dinner" placeholder="обед" required>
+						</div>
+					</div>
+					<div class="row justify-content-center">
+						<div class="col-md-7 col-lg-5">
+							<h2>Тип вагона?</h2>
+							<input type="radio" name="wagon" id="SV" value="SV">
+							<label for="SV">
+								<span>SV</span>
+							</label>
+							<input type="radio" name="wagon" id="Cupe" value="Cupe" checked>
+							<label for="Cupe">
+								<span>Cupe</span>
+							</label>
+							<input type="radio" name="wagon" id="Plac" value="Plac">
+							<label for="Plac">
+								<span>Plac</span>
+							</label>
+							<input type="radio" name="wagon" id="Sit" value="Sit">
+							<label for="Sit">
+								<span>Sit</span>
+							</label>
+						</div>
+					</div>
+					<div class="row justify-content-center">
+						<div class="col-lg-4">
+							<label for="distance">
+								<i class="fa fa-road" aria-hidden="true"></i>
+							</label>
+							<input type="text" name="distance" id="distance" placeholder="км между городами" required>
+						</div>
+					</div>
+					<div class="row justify-content-center">
+						<div class="col-lg-4">
+							<button type="submit" class="submit">оформить заказ</button>
+						</div>
+					</div>
+				</form>	
+			</div>
+		</div>
+	</div>
+
+	<link rel='stylesheet' href='libs/font-awesome/css/font-awesome.min.css'>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<link href="//fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel='stylesheet' href='css/main.css'>
+	<link rel='stylesheet' href='css/media.css'>
+	<script src="js/common.js"></script>
+</body>
+</html>

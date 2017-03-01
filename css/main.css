@@ -1,0 +1,181 @@
+/* Reset style */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+a {
+  text-decoration: none; }
+
+a:focus {
+  text-decoration: none;
+  outline: none; }
+
+a:hover {
+  text-decoration: none; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after, a:after, a:before {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* end reset */
+body {
+  background-image: url(../img/main-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  font: 20px 'Roboto', sans-serif;
+  text-align: center; }
+
+.form {
+  position: relative;
+  margin: 90px 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  box-shadow: inset 0 0 10px #555; }
+  .form h1 {
+    padding: 40px 0 20px 0;
+    color: #FF5722;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 8px 8px 0 0;
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 50%, transparent 100%);
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 50%, transparent 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 50%, transparent 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#00000000',GradientType=0 ); }
+  .form label {
+    margin: 20px 0;
+    cursor: pointer; }
+    .form label i {
+      transform: translateY(4px); }
+    .form label .fa-cutlery {
+      padding-right: 8px; }
+    .form label span {
+      margin-right: 14px;
+      margin-left: 14px;
+      color: #949494; }
+  .form input {
+    outline: none;
+    border: none;
+    background: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    padding-left: 7px;
+    padding-bottom: 2px;
+    font-size: 18px;
+    text-transform: capitalize; }
+    .form input::-webkit-input-placeholder {
+      text-indent: 0px;
+      transition: text-indent 0.3s ease; }
+    .form input::-moz-placeholder {
+      text-indent: 0px;
+      transition: text-indent 0.3s ease; }
+    .form input:-moz-placeholder {
+      text-indent: 0px;
+      transition: text-indent 0.3s ease; }
+    .form input:-ms-input-placeholder {
+      text-indent: 0px;
+      transition: text-indent 0.3s ease; }
+    .form input:focus::-webkit-input-placeholder {
+      text-indent: 500px;
+      transition: text-indent 0.3s ease; }
+    .form input:focus::-moz-placeholder {
+      text-indent: 500px;
+      transition: text-indent 0.3s ease; }
+    .form input:focus:-moz-placeholder {
+      text-indent: 500px;
+      transition: text-indent 0.3s ease; }
+    .form input:focus:-ms-input-placeholder {
+      text-indent: 500px;
+      transition: text-indent 0.3s ease; }
+    .form input::-webkit-input-placeholder {
+      color: #949494; }
+    .form input::-moz-placeholder {
+      color: #949494; }
+    .form input:-moz-placeholder {
+      color: #949494; }
+    .form input:-ms-input-placeholder {
+      color: #949494; }
+    .form input:focus:required:invalid {
+      border-bottom: 1px solid #0f0; }
+    .form input:required:valid {
+      border-bottom: 1px solid #0f0; }
+    .form input:-webkit-autofill, .form input:-webkit-autofill:hover, .form input:-webkit-autofill:focus {
+      -webkit-text-fill-color: #fff;
+      color: #fff;
+      -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+      transition: background-color 5000s ease-in-out 0s; }
+  .form input[type="radio"] {
+    cursor: pointer; }
+  .form h2 {
+    color: #FF5722;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 20px 0; }
+  .form .submit {
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 40px 0 50px 0;
+    border-radius: 3px;
+    padding: 14px 20px;
+    border: 1px solid #fff;
+    font-size: 18px;
+    background: none;
+    color: #949494; }
+    .form .submit:hover {
+      color: #fff;
+      border: 1px solid #FF5722; }
+    .form .submit:focus {
+      outline: none; }
+
+[data-error="error"] {
+  width: 50%;
+  background: #000;
+  position: absolute;
+  top: 4%;
+  left: 25%;
+  padding: 20px;
+  font-size: 18px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #666;
+  vertical-align: middle; }
+  [data-error="error"] p {
+    padding: 6px 0; }
+  [data-error="error"] .submit {
+    margin: 10px 0 10px 20px;
+    padding: 8px 12px; }
