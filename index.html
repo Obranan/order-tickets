@@ -17,30 +17,34 @@
 					</div>
 					<div class="row justify-content-center">
 						<div class="col-md-5 col-lg-4">
-							<label for="passengers">
+							<label>
 								<i class="fa fa-users" aria-hidden="true"></i>
+								<input type="text" name="passengers" id="passengers" required>
+								<span class="label-text">пассажиры</span>
 							</label>
-							<input type="text" name="passengers" id="passengers" placeholder="пассажиры" required>
 						</div>
 						<div class="col-md-5 offset-md-0 col-lg-4 offset-lg-2">
-							<label for="linen">
+							<label>
 								<i class="fa fa-bed" aria-hidden="true"></i>
+								<input type="text" name="linen" id="linen" required>
+								<span class="label-text">постельное бельё</span>
 							</label>
-							<input type="text" name="linen" id="linen" placeholder="постельное бельё" required>
 						</div>
 					</div>
 					<div class="row justify-content-center">
 						<div class="col-md-5 col-lg-4">
-							<label for="tea">
+							<label>
 								<i class="fa fa-coffee" aria-hidden="true"></i>
+								<input type="text" name="tea" id="tea" required>
+								<span class="label-text">чай</span>
 							</label>
-							<input type="text" name="tea" id="tea" placeholder="чай" required>
 						</div>	
 						<div class="col-md-5 offset-md-0 col-lg-4 offset-lg-2">
-							<label for="dinner">
+							<label>
 								<i class="fa fa-cutlery" aria-hidden="true"></i>
+								<input type="text" name="dinner" id="dinner" required>
+								<span class="label-text">обед</span>
 							</label>
-							<input type="text" name="dinner" id="dinner" placeholder="обед" required>
 						</div>
 					</div>
 					<div class="row justify-content-center">
@@ -48,28 +52,29 @@
 							<h2>Тип вагона?</h2>
 							<input type="radio" name="wagon" id="SV" value="SV">
 							<label for="SV">
-								<span>SV</span>
+								<span class="radio-text">SV</span>
 							</label>
 							<input type="radio" name="wagon" id="Cupe" value="Cupe" checked>
 							<label for="Cupe">
-								<span>Cupe</span>
+								<span class="radio-text">Cupe</span>
 							</label>
 							<input type="radio" name="wagon" id="Plac" value="Plac">
 							<label for="Plac">
-								<span>Plac</span>
+								<span class="radio-text">Plac</span>
 							</label>
 							<input type="radio" name="wagon" id="Sit" value="Sit">
 							<label for="Sit">
-								<span>Sit</span>
+								<span class="radio-text">Sit</span>
 							</label>
 						</div>
 					</div>
 					<div class="row justify-content-center">
 						<div class="col-lg-4">
-							<label for="distance">
+							<label>
 								<i class="fa fa-road" aria-hidden="true"></i>
+								<input type="text" name="distance" id="distance" required>
+								<span class="label-text">км между городами</span>
 							</label>
-							<input type="text" name="distance" id="distance" placeholder="км между городами" required>
 						</div>
 					</div>
 					<div class="row justify-content-center">
@@ -82,11 +87,36 @@
 		</div>
 	</div>
 
+	<script id="list-template-confirm" type="text/x-handlebars-template">
+		<h2>{{name}}</h2>
+		{{#if list}}
+	    <ul>
+			{{#each list}}
+			<li>{{item}}
+			{{/each}}
+		</ul>
+        {{/if}}
+		<button class="submit ok">ок</button>
+		<button class="submit no">отмена</button>
+	</script>
+
+	<script id="list-template-alert" type="text/x-handlebars-template">
+		<h2>{{name}}</h2>
+		{{#if list}}
+	    <ul>
+			{{#each list}}
+			<li>{{item}}
+			{{/each}}
+		</ul>
+        {{/if}}
+	</script>
+
 	<link rel='stylesheet' href='libs/font-awesome/css/font-awesome.min.css'>
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 	<link href="//fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link rel='stylesheet' href='css/main.css'>
 	<link rel='stylesheet' href='css/media.css'>
+	<script src="libs/handlebars/handlebars.min.js"></script>
 	<script src="js/common.js"></script>
 </body>
 </html>

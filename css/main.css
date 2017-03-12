@@ -79,68 +79,57 @@ body {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#00000000',GradientType=0 ); }
   .form label {
     margin: 20px 0;
-    cursor: pointer; }
+    cursor: text; }
     .form label i {
-      transform: translateY(4px); }
+      transform: translateY(5px); }
+    .form label .label-text {
+      text-transform: capitalize;
+      display: block;
+      transform: translate(36px, -26px) scale(1);
+      transition: transform 0.3s ease;
+      position: absolute;
+      font-size: 18px;
+      color: #949494; }
+    .form label input {
+      position: relative;
+      outline: none;
+      border: none;
+      background: none;
+      border-bottom: 1px solid #fff;
+      color: #fff;
+      padding-left: 7px;
+      padding-bottom: 2px;
+      font-size: 18px;
+      text-transform: capitalize; }
+      .form label input:focus + .label-text {
+        transform: translate(36px, -46px) scale(0.9);
+        transition: transform 0.3s ease; }
+      .form label input::-webkit-input-placeholder {
+        color: #949494; }
+      .form label input::-moz-placeholder {
+        color: #949494; }
+      .form label input:-moz-placeholder {
+        color: #949494; }
+      .form label input:-ms-input-placeholder {
+        color: #949494; }
+      .form label input:focus:required:invalid {
+        border-bottom: 1px solid #0f0; }
+      .form label input:required:valid {
+        border-bottom: 1px solid #0f0; }
+      .form label input:-webkit-autofill, .form label input:-webkit-autofill:hover, .form label input:-webkit-autofill:focus {
+        -webkit-text-fill-color: #fff;
+        color: #fff;
+        -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+        transition: background-color 5000s ease-in-out 0s; }
     .form label .fa-cutlery {
       padding-right: 8px; }
-    .form label span {
+    .form label .radio-text {
       margin-right: 14px;
       margin-left: 14px;
       color: #949494; }
-  .form input {
-    outline: none;
-    border: none;
-    background: none;
-    border-bottom: 1px solid #fff;
-    color: #fff;
-    padding-left: 7px;
-    padding-bottom: 2px;
-    font-size: 18px;
-    text-transform: capitalize; }
-    .form input::-webkit-input-placeholder {
-      text-indent: 0px;
-      transition: text-indent 0.3s ease; }
-    .form input::-moz-placeholder {
-      text-indent: 0px;
-      transition: text-indent 0.3s ease; }
-    .form input:-moz-placeholder {
-      text-indent: 0px;
-      transition: text-indent 0.3s ease; }
-    .form input:-ms-input-placeholder {
-      text-indent: 0px;
-      transition: text-indent 0.3s ease; }
-    .form input:focus::-webkit-input-placeholder {
-      text-indent: 500px;
-      transition: text-indent 0.3s ease; }
-    .form input:focus::-moz-placeholder {
-      text-indent: 500px;
-      transition: text-indent 0.3s ease; }
-    .form input:focus:-moz-placeholder {
-      text-indent: 500px;
-      transition: text-indent 0.3s ease; }
-    .form input:focus:-ms-input-placeholder {
-      text-indent: 500px;
-      transition: text-indent 0.3s ease; }
-    .form input::-webkit-input-placeholder {
-      color: #949494; }
-    .form input::-moz-placeholder {
-      color: #949494; }
-    .form input:-moz-placeholder {
-      color: #949494; }
-    .form input:-ms-input-placeholder {
-      color: #949494; }
-    .form input:focus:required:invalid {
-      border-bottom: 1px solid #0f0; }
-    .form input:required:valid {
-      border-bottom: 1px solid #0f0; }
-    .form input:-webkit-autofill, .form input:-webkit-autofill:hover, .form input:-webkit-autofill:focus {
-      -webkit-text-fill-color: #fff;
-      color: #fff;
-      -webkit-box-shadow: 0 0 0px 1000px transparent inset;
-      transition: background-color 5000s ease-in-out 0s; }
-  .form input[type="radio"] {
-    cursor: pointer; }
+  .form input[type="radio"], .form input[type="radio"] + label {
+    cursor: pointer;
+    outline: none; }
   .form h2 {
     color: #FF5722;
     font-size: 18px;
@@ -163,7 +152,7 @@ body {
     .form .submit:focus {
       outline: none; }
 
-[data-error="error"] {
+[data-info="info"] {
   width: 50%;
   background: #000;
   position: absolute;
@@ -174,8 +163,14 @@ body {
   border-radius: 6px;
   box-shadow: 0 0 10px #666;
   vertical-align: middle; }
-  [data-error="error"] p {
+  [data-info="info"] li {
     padding: 6px 0; }
-  [data-error="error"] .submit {
+  [data-info="info"] .submit {
     margin: 10px 0 10px 20px;
     padding: 8px 12px; }
+  [data-info="info"] .ok:hover {
+    border: 1px solid #0f0; }
+
+.out-of-focus {
+  transform: translate(36px, -46px) scale(0.9) !important;
+  transition: transform 0.3s ease; }
